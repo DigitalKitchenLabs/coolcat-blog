@@ -42,9 +42,9 @@ const ArticlePage = ({
         ogUrl={`/blog/${slug}`}
       >
         <div>
-          <div className="px-6 py-16 pb-48 mx-auto -mb-48 text-center bg-gray-100 md:pb-96 md:-mb-96">
-            <div className="max-w-3xl mx-auto">
-              <div className="flex items-center justify-center mb-2 space-x-2 text-sm text-gray-500">
+          <div className="px-6 py-16 pb-48 mx-auto -mb-48 text-center dark:bg-blue-900 md:pb-96 md:-mb-96">
+            <div className="max-w-5xl mx-auto">
+              <div className="flex items-center font-heading justify-center mb-2 space-x-2 text-sm text-gray-800 dark:text-catred-500">
                 <div className="">{publishedOn}</div>
                 {publishedOn !== modifiedDate && (
                   <>
@@ -53,18 +53,18 @@ const ArticlePage = ({
                   </>
                 )}
               </div>
-              <div className="font-extrabold tracking-tight text-gray-900 text-w-4xl sm:text-4xl">
+              <div className="font-extrabold tracking-tight font-heading text-gray-900 dark:text-offwhite-1 text-w-100 sm:text-4xl">
                 {title}
               </div>
-              <div className="max-w-3xl mx-auto mt-3 text-xl leading-8 text-gray-500 sm:mt-4">
+              <div className="max-w-3xl mx-auto mt-3 text-xl leading-8 text-gray-500 dark:text-offwhite-1 font-bold sm:mt-4">
                 {summary}
               </div>
             </div>
           </div>
 
-          <div className="max-w-5xl px-6 mx-auto my-16 md:px-8">
+          <div className="max-w-5xl rounded-3xl mx-auto my-16 shadow-catred-500 shadow-lg bg-catred-500 dark:bg-gray-800">
             <Image
-              className="rounded-lg"
+              className="rounded-3xl"
               objectFit="cover"
               src={coverImage}
               placeholder="blur"
@@ -81,12 +81,12 @@ const ArticlePage = ({
               <Fragment key={block.id}>{renderBlocks(block)}</Fragment>
             ))}
           </div>
-          <div className="py-12 border-t">
+          <div className="py-12 border-t dark:bg-gray-800">
             <Container>
               <div className="flex items-center justify-between my-8">
-                <div className="text-3xl font-bold text-gray-900">Latest articles</div>
+                <div className="text-3xl font-bold text-gray-900  dark:text-offwhite-1">Latest articles</div>
                 <Link href="/">
-                  <span className="font-semibold text-gray-900 cursor-pointer">
+                  <span className="font-semibold text-gray-900 dark:text-offwhite-1 cursor-pointer">
                     More articles ➜
                   </span>
                 </Link>

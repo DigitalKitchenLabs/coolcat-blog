@@ -1,6 +1,5 @@
 import { convertToArticleList, getAllArticles } from 'utils/notion';
 import { Layout } from 'layouts/Layout';
-import HeroHeader from 'components/HeroHeader';
 import Container from 'components/Container';
 import { useState } from 'react';
 import ArticleList from 'components/ArticleList';
@@ -13,8 +12,7 @@ export default function Index({ articles, categories }) {
 
   return (
     <Layout>
-      <HeroHeader />
-      <div className="flex flex-wrap justify-center gap-4 mt-8">
+      <div className="flex flex-wrap justify-center gap-4 mt-16">
         {categories.map(tag => (
           <Category
             tag={tag}
@@ -26,8 +24,8 @@ export default function Index({ articles, categories }) {
       </div>
       <Container>
         <div className="py-8">
-          <div className="my-8 text-3xl font-bold text-gray-900">
-            {!selectedTag ? 'Latest articles' : `${selectedTag} articles`}
+          <div className="my-4 text-3xl font-bold text-gray-900 dark:text-offwhite-1 font-heading">
+            {!selectedTag ? 'Latest Articles' : `${selectedTag} Articles`}
           </div>
           <ArticleList articles={filteredArticles} />
         </div>

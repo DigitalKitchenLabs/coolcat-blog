@@ -18,13 +18,12 @@ export function Layout(props) {
   };
 
   return (
-    <>
+    <div className="h-screen">
       <MetaHead {...metaHeadProps} />
       <Header />
-      <div className="pt-14">{children}</div>
+      <div className="pt-10 min-h-full bg-offwhite-1 dark:bg-gradient-to-t from-blue-900 to-blue-800">{children}</div>
       {FORM_ID && API_KEY && <Subscribe />}
-
       <Footer />
-    </>
+    </div>
   );
 }

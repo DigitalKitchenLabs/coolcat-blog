@@ -1,45 +1,37 @@
 import siteData from 'data/siteData';
 import Image from 'next/image';
+import { FaGithub, FaTwitter } from 'react-icons/fa';
+import ThemeToggler from './ThemeToggle';
 
 const socials = [
   {
     name: 'Twitter',
     href: siteData.twitter,
-    icon: '/socials/twitter.svg'
+    icon: FaTwitter
   },
   {
     name: 'GitHub',
     href: siteData.github,
-    icon: '/socials/github.svg'
-  },
-  {
-    name: 'LinkedIn',
-    href: siteData.linkedin,
-    icon: '/socials/linkedin.svg'
+    icon: FaGithub
   }
 ];
 
 export default function Socials() {
   return (
-    <div className="flex justify-center space-x-6 md:order-2">
+    <div className="flex justify-center space-x-4 md:order-2">
       {socials.map(item => (
         <a
           key={item.name}
           href={item.href}
-          className="text-gray-400 transform hover:text-gray-500 filter hover:contrast-0"
+          className="w-8 h-8 bg-blue-800 rounded-xl flex items-center justify-center hover:ring-2 ring-catred-500 transition-all duration-300 focus:outline-none"
           target="_blank"
           rel="noreferrer"
         >
           <span className="sr-only">{item.name}</span>
-          <Image
-            src={item.icon}
-            alt="social-icon"
-            width={24}
-            height={24}
-            objectFit="cover"
-          />
+          <item.icon className="text-offwhite-1 w-5 h-5" />
         </a>
       ))}
+      <ThemeToggler />
     </div>
   );
 }

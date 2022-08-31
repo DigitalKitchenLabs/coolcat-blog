@@ -13,7 +13,7 @@ export function renderBlocks(block) {
   switch (type) {
     case 'paragraph':
       return (
-        <p className="leading-[28px] text-lg">
+        <p className="leading-[24px] font-body font-normal text-lg">
           <Text text={value.text} />
         </p>
       );
@@ -44,7 +44,7 @@ export function renderBlocks(block) {
     case 'bulleted_list_item':
     case 'numbered_list_item':
       return (
-        <li className="text-lg">
+        <li className="text-lg leading-[20px]">
           <Text text={value.text} />
         </li>
       );
@@ -125,7 +125,7 @@ export function renderBlocks(block) {
       );
     case 'divider':
       return (
-        <hr className="my-16 w-full border-none text-center h-10 before:content-['∿∿∿'] before:text-[#D1D5DB] before:text-2xl"></hr>
+        <hr className="my-16 w-full border-none text-center h-10 before:content-['∿∿∿'] before:text-gray-800 before:dark:text-offwhite-1 before:text-2xl"></hr>
       );
     default:
       return `❌ Unsupported block (${

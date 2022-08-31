@@ -1,3 +1,4 @@
+import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
 import Script from 'next/script';
 import { Toaster } from 'react-hot-toast';
@@ -12,8 +13,10 @@ export default function App({ Component, pageProps }: AppProps) {
           src="https://umami-production-55de.up.railway.app/umami.js"
         />
       )}
-      <Toaster />
-      <Component {...pageProps} />;
+      <ThemeProvider attribute="class">
+        <Toaster />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }
