@@ -1,5 +1,5 @@
 const siteData = {
-  title: 'Starter Notion blog for Nextjs with Tailwind',
+  title: 'CoolCat | Blog',
   author: 'CoolCat',
   headerTitle: 'CoolCat',
   profileUrl: '/profile.svg',
