@@ -13,7 +13,7 @@ export default function ArticleCard({ article }: Props) {
   const formattedTime = getLocalizedDate(article.publishedDate);
 
   return (
-    <a href={`/blog/${slug}`} className="bg-white dark:bg-catred-500 rounded-xl overflow-hidden hover:ring-2 ring-catred-500">
+    <a href={`/blog/${slug}`} className="bg-white dark:bg-catred-500 rounded-xl overflow-hidden shadow-lg hover:ring-2 ring-catred-500 ">
       <div className="flex flex-col overflow-hidden cursor-pointer group">
         <div className="relative">
           <div className="absolute">
@@ -38,7 +38,7 @@ export default function ArticleCard({ article }: Props) {
             alt={'article cover'}
           />
         </div>
-        <div className="flex flex-col justify-between flex-1 py-2 px-2 bg-white dark:bg-blue-800 rounded-b-xl">
+        <div className="flex flex-col h-48 justify-around py-2 px-2 bg-white dark:bg-blue-800 rounded-b-xl">
           <div className="flex-1">
             <p className="text-xl font-bold text-gray-900 dark:text-white font-heading">{article.title}</p>
             <p className="mt-3 text-base text-gray-700 dark:text-gray-50 line-clamp-2">{article.summary}</p>

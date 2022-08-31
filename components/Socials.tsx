@@ -1,6 +1,5 @@
 import siteData from 'data/siteData';
-import Image from 'next/image';
-import { FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaTelegramPlane, FaTwitter } from 'react-icons/fa';
 import ThemeToggler from './ThemeToggle';
 
 const socials = [
@@ -13,6 +12,11 @@ const socials = [
     name: 'GitHub',
     href: siteData.github,
     icon: FaGithub
+  },
+    {
+    name: 'Telegram',
+    href: siteData.telegram,
+    icon: FaTelegramPlane
   }
 ];
 

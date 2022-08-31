@@ -1,9 +1,9 @@
 {
-  "private": true,
-  "description": "Notion-powered blog starter with Nextjs and Tailwind",
-  "repository": "https://github.com/tuanphungcz/nextjs-notion-blog-starter",
-  "homepage": "https://nextjs-notion-blog-starter.vercel.app/",
-  "author": "Tuan Phung <tuan@phung.cz>",
+  "private": false,
+  "description": "Notion-powered blog with Nextjs and Tailwind",
+  "repository": "https://github.com/DigitalKitchenLabs/coolcat-blog",
+  "homepage": "https://blog.coolcat.space/",
+  "author": "Marius Modlich <marius@digitalkitchen.zone>",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
