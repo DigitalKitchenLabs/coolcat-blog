@@ -21,7 +21,7 @@ export default function Text({ text }) {
         ].join(' ')}
         style={color !== 'default' ? { color } : {}}
       >
-        {text.link ? <a className="text-gray-700 underline" href={text.link.url}>{text.content}</a> : text.content}
+        {text.link ? <a className="text-catred-500 underline" href={text.link.url}>{text.content}</a> : text.content}
       </span>
     );
   });
